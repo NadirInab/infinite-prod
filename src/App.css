@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* cursor: none; */
+  overflow-x: hidden;
+}
+
+.serif-font {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom cursor styles moved to component */
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent-foreground));
+}
+
+/* Glass effect */
+.glass {
+  background: hsl(var(--background) / 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid hsl(var(--border) / 0.3);
+}
+
+/* Enhanced glass effect for light mode */
+.light .glass {
+  background: hsl(var(--background) / 0.9);
+  backdrop-filter: blur(16px);
+  border: 1px solid hsl(var(--border) / 0.4);
+  box-shadow: 0 8px 32px hsl(var(--primary) / 0.1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #f97316, #3b82f6, #8b5cf6);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px hsl(var(--primary) / 0.2);
+}
+
+/* Enhanced hover effects for light mode */
+.light .hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px hsl(var(--primary) / 0.15), 0 10px 20px hsl(var(--secondary) / 0.1);
+}
+
+/* Professional card styling for light mode */
+.light .card-professional {
+  background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--background)));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.08);
+  transition: all 0.3s ease;
+}
+
+.light .card-professional:hover {
+  box-shadow: 0 12px 30px hsl(var(--primary) / 0.15);
+  transform: translateY(-2px);
+}
+
+/* Page transitions */
+.page-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.page-transition.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Video background */
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+/* Professional light mode enhancements */
+.light {
+  /* Custom scrollbar for light mode */
+}
+
+.light ::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--accent)));
+  border-radius: 6px;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, hsl(var(--accent)), hsl(var(--primary)));
+}
+
+/* Light mode navigation styling */
+.light .nav-professional {
+  background: linear-gradient(135deg, hsl(var(--background) / 0.95), hsl(var(--card) / 0.95));
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid hsl(var(--border) / 0.5);
+  box-shadow: 0 4px 20px hsl(var(--primary) / 0.08);
+}
+
+/* Light mode button enhancements */
+.light .btn-primary {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  color: hsl(var(--primary-foreground));
+  border: 1px solid hsl(var(--primary));
+  box-shadow: 0 4px 15px hsl(var(--primary) / 0.2);
+  transition: all 0.3s ease;
+}
+
+.light .btn-primary:hover {
+  background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+  box-shadow: 0 8px 25px hsl(var(--primary) / 0.3);
+  transform: translateY(-2px);
+}
+
+.light .btn-secondary {
+  background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--background)));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--secondary));
+  box-shadow: 0 3px 12px hsl(var(--secondary) / 0.2);
+}
+
+.light .btn-secondary:hover {
+  background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--secondary)));
+  box-shadow: 0 6px 20px hsl(var(--secondary) / 0.3);
+  transform: translateY(-1px);
+}
+
+/* Light mode section backgrounds */
+.light .section-bg-primary {
+  background: linear-gradient(145deg, hsl(var(--background)), hsl(var(--card)));
+  position: relative;
+}
+
+.light .section-bg-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at top, hsl(var(--primary) / 0.05), transparent 70%);
+  pointer-events: none;
+}
+
+.light .section-bg-secondary {
+  background: linear-gradient(145deg, hsl(var(--muted)), hsl(var(--secondary) / 0.3));
+}
+
+/* Light mode text enhancements */
+.light .text-professional {
+  color: hsl(var(--foreground));
+  text-shadow: 0 1px 3px hsl(var(--primary) / 0.1);
+}
+
+.light .text-muted-professional {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Light mode hero section styling */
+.light .hero-bg {
+  background: linear-gradient(135deg, 
+    hsl(var(--background)), 
+    hsl(var(--card)), 
+    hsl(var(--muted))
+  );
+  position: relative;
+}
+
+.light .hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 80%, hsl(var(--primary) / 0.1), transparent 50%),
+    radial-gradient(ellipse at 80% 20%, hsl(var(--secondary) / 0.1), transparent 50%),
+    radial-gradient(ellipse at 40% 40%, hsl(var(--accent) / 0.05), transparent 50%);
+  pointer-events: none;
+}
+
+/* Light mode form styling */
+.light .form-professional input,
+.light .form-professional textarea,
+.light .form-professional select {
+  background: hsl(var(--background));
+  border: 2px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  transition: all 0.3s ease;
+}
+
+.light .form-professional input:focus,
+.light .form-professional textarea:focus,
+.light .form-professional select:focus {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+  outline: none;
+}
+
+/* Light mode alert and notification styling */
+.light .alert-success {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.1));
+  border: 1px solid hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
+}
+
+.light .alert-info {
+  background: linear-gradient(135deg, hsl(var(--secondary) / 0.1), hsl(var(--muted) / 0.1));
+  border: 1px solid hsl(var(--secondary) / 0.3);
+  color: hsl(var(--foreground));
+}
