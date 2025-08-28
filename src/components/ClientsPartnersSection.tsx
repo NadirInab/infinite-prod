@@ -111,7 +111,7 @@ const ClientsPartnersSection = () => {
   const clients = [
     {
       name: "SSTCO",
-      logo: "/clients/sstco.jpeg",
+      logo: "/clients/sstco.png",
       description: "Solutions Technologiques",
       category: "Construction"
     },
@@ -123,7 +123,7 @@ const ClientsPartnersSection = () => {
     },
     {
       name: "AMCAS",
-      logo: "/clients/amcas.jpg",
+      logo: "/clients/amcas.png",
       description: "Solutions Technologiques",
       category: "Technology"
     },
@@ -135,7 +135,7 @@ const ClientsPartnersSection = () => {
     },
     {
       name: "Groupe Scholaire Attaraji",
-      logo: "/clients/attaraji.jpg",
+      logo: "/clients/attaraji.png",
       description: "Etablissement Scolaire",
       category: "Education"
     },
@@ -147,13 +147,13 @@ const ClientsPartnersSection = () => {
     },
     {
       name: "Perla",
-      logo: "/clients/perla.jpg",
+      logo: "/clients/perla.png",
       description: "Cosmétiques Premium",
       category: "Immobilier"
     },
     {
       name: "Renault",
-      logo: "/clients/renault.jpg",
+      logo: "/clients/renault.png",
       description: "Constructeur Automobile",
       category: "Automotive"
     },
@@ -165,7 +165,7 @@ const ClientsPartnersSection = () => {
     },
     {
       name: "Dacia Motors",
-      logo: "/clients/dacia.jpg",
+      logo: "/clients/dacia.png",
       description: "Constructeur Automobile",
       category: "Automotive"
     },
@@ -271,11 +271,11 @@ const ClientsPartnersSection = () => {
                     whileHover={{ y: -8 }}
                     transition={{ type: "spring", stiffness: 300, damping: 25 }}
                   >
-                    <div className="relative bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-2xl p-4 h-55 flex flex-col items-center justify-center transition-all duration-500 group-hover:bg-white/20 dark:group-hover:bg-white/10 group-hover:border-white/40 dark:group-hover:border-white/20 group-hover:shadow-2xl group-hover:shadow-white/10">
+                    <div className="relative bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-2xl p-2 h-60 flex flex-col items-center justify-center transition-all duration-500 group-hover:bg-white/20 dark:group-hover:bg-white/10 group-hover:border-white/40 dark:group-hover:border-white/20 group-hover:shadow-2xl group-hover:shadow-white/10">
 
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-400/10 via-transparent to-teal-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                      <div className="relative z-10 w-32 h-32 mb-4 overflow-hidden rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="relative z-10 w-32 h-32 mb-6 overflow-hidden rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <img
                           src={client.logo}
                           alt={client.name}
