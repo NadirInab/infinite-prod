@@ -11,8 +11,8 @@ const Contact = () => {
       icon: <Mail className="h-8 w-8" />,
       title: "Email",
       description: "Écrivez-nous à tout moment",
-      contact: "hello@infiniteprod.ma",
-      action: "mailto:hello@infiniteprod.ma",
+      contact: "infinit3prod@gmail.com",
+      action: "mailto:infinit3prod@gmail.com",
       color: "from-emerald-500 to-teal-500",
       bgColor: "from-emerald-50 to-teal-50 dark:from-emerald-950/50 dark:to-teal-950/50",
       borderColor: "border-emerald-200 dark:border-emerald-800"
@@ -21,8 +21,8 @@ const Contact = () => {
       icon: <Phone className="h-8 w-8" />,
       title: "Téléphone",
       description: "Appelez-nous directement",
-      contact: "+212 6 XX XX XX XX",
-      action: "tel:+212600000000",
+      contact: "+212 694958220",
+      action: "tel:+212694958220",
       color: "from-blue-500 to-indigo-500",
       bgColor: "from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50",
       borderColor: "border-blue-200 dark:border-blue-800"
@@ -31,8 +31,8 @@ const Contact = () => {
       icon: <MessageCircle className="h-8 w-8" />,
       title: "WhatsApp",
       description: "Messagerie instantanée",
-      contact: "+212 6 XX XX XX XX",
-      action: "https://wa.me/212600000000",
+      contact: "+212 694958220",
+      action: "https://wa.me/+212694958220",
       color: "from-green-500 to-emerald-500",
       bgColor: "from-green-50 to-emerald-50 dark:from-green-950/50 dark:to-emerald-950/50",
       borderColor: "border-green-200 dark:border-green-800"
@@ -44,7 +44,7 @@ const Contact = () => {
       name: "Instagram",
       icon: <Instagram className="h-6 w-6" />,
       handle: "@infiniteprod",
-      url: "https://instagram.com/infiniteprod",
+      url: "https://www.instagram.com/_infiniteprod_/",
       color: "hover:text-pink-600"
     },
     {
@@ -271,7 +271,7 @@ const Contact = () => {
                 size="lg" 
                 className="bg-white text-emerald-600 hover:bg-gray-50 px-8 py-6 text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 font-semibold"
               >
-                <a href="mailto:hello@infiniteprod.ma">
+                <a href="mailto:infinit3prod@gmail.com">
                   <Mail className="mr-3 h-5 w-5" />
                   Envoyer un email
                 </a>
@@ -283,7 +283,7 @@ const Contact = () => {
                 variant="outline"
                 className="bg-white/10 text-white border-white/30 hover:bg-white/20 px-8 py-6 text-lg rounded-2xl backdrop-blur-sm transition-all duration-300 font-semibold"
               >
-                <a href="https://wa.me/212600000000" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+212694958220" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-3 h-5 w-5" />
                   WhatsApp
                 </a>
